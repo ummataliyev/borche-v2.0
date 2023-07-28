@@ -341,3 +341,43 @@
       window.location.href = nextPage;
   }
 </script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  // Telegram Bot API endpoint for sending messages
+  const API_ENDPOINT = 'https://api.telegram.org/bot6198234647:AAFl5EoKgC7yv5IenlEEp5M5sRH4D1eeGu8/sendMessage';
+
+  // Function to send a message
+  function sendMessageToTelegram(name, phone) {
+    // Compose the message text
+    const messageText = `Name: ${name}\nPhone: ${phone}`;
+
+    // Prepare the request payload
+    const payload = {
+      chat_id: -1001978920378,
+      text: messageText
+    };
+
+    // Send the HTTP POST request to the Telegram Bot API
+    axios.post(API_ENDPOINT, payload)
+      .then(response => {
+        console.log('Message sent successfully!');
+      })
+      .catch(error => {
+        console.error('Failed to send the message.', error);
+      });
+  }
+
+  // Example usage
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const nameInput = document.getElementById('form_name');
+    const phoneInput = document.getElementById('form_phone');
+
+    const name = nameInput.value;
+    const phone = phoneInput.value;
+
+    sendMessageToTelegram(name, phone);
+  });
+</script>
