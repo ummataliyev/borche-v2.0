@@ -1,0 +1,434 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website.">
+  <meta name="keywords" content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
+  <meta name="author" content="elemis">
+  <title>Borche.uz</title>
+  <link rel="icon" href="/static/favicon.ico%22%20type%3D%22image/x-icon">
+  <link rel="stylesheet" href="/static/assets/css/plugins.css">
+  <link rel="stylesheet" href="/static/assets/css/style.css">
+  <link rel="stylesheet" href="/static/assets/css/colors/grape.css">
+  <link rel="preload" href="/static/assets/css/fonts/space.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" type="text/css" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-vt6aTNsK4RaQEu3fWIZi3n+3Om1mrTbhrhF5pX0qWePT9VCJpQf5g68NSUL4W4rR" crossorigin="anonymous">
+  <style>
+    /* Styles for the modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .modal-close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .modal-close:hover,
+    .modal-close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .background-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <header class="position-absolute w-100">
+      <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+        <div class="container flex-lg-row flex-nowrap align-items-center">
+          <div class="navbar-brand w-100">
+            <a href="/ru/" style="display: inline-block;">
+              <img src=/static/media/logo-removebg-preview.png srcset=/static/media/logo-removebg-preview.png alt="" style="width: 100%; max-width: 400px;" />
+            </a>            
+          </div>
+          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+            <div class="offcanvas-header d-lg-none">
+              <h3 class="text-white fs-30 mb-0">Borche</h3>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/ru/" style="color: black;">Главня</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ru/products/" style="color: black;">Продукты</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ru/about-us/" style="color: black;">Связаться с нами</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ru/contact-us/" style="color: black;">Контакты</a>
+                </li>                
+            </div>
+          </div>
+          <div class="navbar-other w-100 d-flex ms-auto">
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <li class="nav-item dropdown language-select text-uppercase">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+                  
+                  
+                  
+                  
+                    
+                  
+                    
+                      ru
+                    
+                  
+                    
+                  
+                </a>
+                <ul class="dropdown-menu">
+                  <form id="languageForm">
+                    <input type="hidden" name="next" value="">
+                    <li class="nav-item">
+                        <button class="dropdown-item" type="button" onclick="setLanguage('uz')" style="text-transform: uppercase;">
+                            uz
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="dropdown-item" type="button" onclick="setLanguage('ru')" style="text-transform: uppercase;">
+                            ru
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="dropdown-item" type="button" onclick="setLanguage('en')" style="text-transform: uppercase;">
+                            en
+                        </button>
+                    </li>
+                  </form>
+                </ul>
+              </li>
+              <li class="nav-item d-lg-none">
+                <button class="hamburger offcanvas-nav-btn"><span></span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+
+
+
+
+<section class="wrapper bg-light">
+  <div class="py-5">
+    <div class="container">
+      <h1 class="my-15">Продукты</h1>
+      <hr class="mb-4">
+      <section>
+        <div class="blog grid grid-view">
+          <div class="row isotope gx-md-8 gy-8 mb-8">
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top"><img src="/static/media/BU-V.jpg"/></a></figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="#">BU-V Series</a></h2>
+                  </div>
+                  <div class="post-content">
+                    <p>
+                      Borche BU6800 является самой большой машиной для литья под давлением с двумя пластинами в Азии с точки зрения сочетания усилия смыкания и объема впрыска, а также эффекта энергосбережения. Прочность на сжатие достигает 68000 кН. Интеллектуальный двухплитный IMM Borche имеет очень долгий срок службы, точную, стабильную и надежную работу, меньше занимаемой площади и меньше головной боли при обслуживании.
+                    </p>
+                  </div>
+                  <!-- /.post-content -->
+                </div>
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top"><img src="/static/media/Bi.jpeg"/></a>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="#">Bi Series</a></h2>
+                  </div>
+                  <!-- /.post-header -->
+                  <div class="post-content">
+                    <p>
+                      Двухрядное подключение периферийных устройств и двусторонняя передача данных способный общаться, который интегрирует данные периферийного оборудования в контроллер машины. Машина оснащена другим интерфейсом для сбора и передачи данных на платформу PlasCloud, загрузки фактического состояния машины, технических параметров и состояния периферийного оборудования.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top"><img src="/static/media/BE.jpg"/></a>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="#">BS-III Series</a></h2>
+                  </div>
+                  <div class="post-content">
+                    <p>
+                      Подходящая система питания серии BS-Ill Servo, высокоточный контроль, стабильная работа, высокая универсальность и соответствие различным производственным требованиям. Имеет три размера винтового ствола, чтобы удовлетворить.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top"><img src="/static/media/BD.jpg"/></a>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="#">BD Series</a></h2>
+                  </div>
+                  <div class="post-content">
+                    <p>
+                      Электромашина Borche нового поколения серии BD direct отличается технологией привода. Серия BD является отдельной сочетает в себе преимущества прав интеллектуальной собственности, структуру прямого привода, интеллектуальное управление литьем под давлением, оптимизацию процессов с помощью больших данных.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <div class="row">
+        
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="/media/media/Borche_Bi160-M.jpg" class="card-img-top" alt="Borche Bi160-M">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="/ru/product/6/" target="_blank">Borche Bi160-M</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="/media/media/Borche_Bi200.jpg" class="card-img-top" alt="Borche Bi200">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="/ru/product/5/" target="_blank">Borche Bi200</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="/media/media/Borche_BU900.jpg" class="card-img-top" alt="Borche BU900">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="/ru/product/4/" target="_blank">Borche BU900</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="/media/media/WVDB-50.jpg" class="card-img-top" alt="Wensui WVDB-50">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="/ru/product/3/" target="_blank">Wensui WVDB-50</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="/media/media/WSIA-10-P.jpg" class="card-img-top" alt="Wensui WSIA-10-P">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="/ru/product/2/" target="_blank">Wensui WSIA-10-P</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="/media/media/WSIA-05-P.jpg" class="card-img-top" alt="Wensui WSIA-05-P">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="/ru/product/1/" target="_blank">Wensui WSIA-05-P</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrapper bg-gray">
+  <div class="container py-12 py-md-14">
+    <div class="row gx-lg-8 gx-xl-12 gy-8">
+      <div class="col-md-6 col-lg-4">
+        <div class="d-flex flex-row">
+          <div>
+            <img src="/static/assets/img/icons/solid/shipment.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-navy me-4" alt="" />
+          </div>
+          <div>
+            <h4 class="mb-1">Быстрая доставка</h4>
+            <p class="mb-0">Безопасная доставка купленного товара по адресу в короткие сроки давать</p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-4">
+        <div class="d-flex flex-row">
+          <div>
+            <img src="/static/assets/img/icons/solid/push-cart.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-navy me-4" alt="" />
+          </div>
+          <div>
+            <h4 class="mb-1">Технические инструкции</h4>
+            <p class="mb-0">Навыки установки и использования предоставляются при доставке продукта</p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-4">
+        <div class="d-flex flex-row">
+          <div>
+            <img src="/static/assets/img/icons/solid/verify.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-navy me-4" alt="" />
+          </div>
+          <div>
+            <h4 class="mb-1">Гарантия на обслуживание один год</h4>
+            <p class="mb-0">Обслуживание купленных товаров гарантируется в течение одного года</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="progress-wrap">
+  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+  </svg>
+</div>
+
+
+
+<footer class="bg-dark text-inverse mt-0 mt-md-16">
+  <div class="container py-13 py-md-15">
+    <div class="row gy-6 gy-lg-0 justify-content-center">
+      <div class="col-md-4 col-lg-3">
+        <div class="widget">
+          <img class="mb-4" src="/static/media/yellow-logo.svg" alt="" style="width: 100%; max-width: 200px;" />
+          <p>© 2023 Borche.uz</p>
+          <nav class="nav social social-white">
+            <a href="https://www.facebook.com/profile.php?id=100086471061320&mibextid=LQQJ4d" target="_blank"><i class="uil uil-facebook-f"></i></a>
+            <a href="https://instagram.com/borcheuz?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="uil uil-instagram"></i></a>
+            <a href="https://youtube.com/@borcheuzbekistan5691" target="_blank"><i class="uil uil-youtube"></i></a>
+          </nav>
+          <!-- /.social -->
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-md-4 col-lg-3">
+        <div class="widget">
+          <h4 class="widget-title text-white mb-3">Для общения</h4>
+          <address class="pe-xl-15 pe-xxl-">Улица Тахтапул, 348, Ташкент, Узбекистан</address>
+          <span>info@borche.uz</span></a><br /> +998 (94) 060 00 10
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-md-4 col-lg-3">
+        <div class="widget">
+          <h4 class="widget-title text-white mb-3">Для дополнительной информации</h4>
+          <ul class="list-unstyled mb-0">
+            <li><a href="/ru/">Главня</a></li>
+            <li><a href="/ru/about-us/">Связаться с нами</a></li>
+            <li><a href="/ru/products/">Продукты</a></li>
+            <li><a href="/ru/contact-us/">Контакты</a></li>
+          </ul>          
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</footer>
+
+
+
+
+<script src="/static/assets/js/plugins.js"></script>
+<script src="/static/assets/js/theme.js"></script>
+<script>
+  function setLanguage(language) {
+      // Save the selected language in local storage (or use cookies if you prefer)
+      localStorage.setItem('selectedLanguage', language);
+
+      // Redirect the user to the appropriate page based on the selected language
+      const pageMap = {
+          'uz': './uz/index.html',
+          'ru': '/ru/index.html',
+          'en': '/en/index.html',
+      };
+      const nextPage = pageMap[language] || '/default_path.html';
+      window.location.href = nextPage;
+  }
+</script>
