@@ -258,6 +258,9 @@
                 </div>
               </div>
             </form>
+            <div id="success-message" class="text-center" style="display: none;">
+              Мы получили ваш запрос. Оставайтесь с нами, мы скоро свяжемся с вами ;)
+            </div>
           </div>
         </div>
         <!-- /column -->
@@ -379,5 +382,20 @@
     const phone = phoneInput.value;
 
     sendMessageToTelegram(name, phone);
+  });
+</script>
+<script>
+  // Function to handle form submission
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Add your code here to handle form submission (e.g., AJAX request to the server)
+
+    // Display the success message after form submission
+    document.getElementById("success-message").style.display = "block";
+
+    // Optional: Clear the form fields after submission
+    document.getElementById("form_name").value = "";
+    document.getElementById("form_phone").value = "+998";
   });
 </script>
